@@ -1,4 +1,8 @@
-var timerNumber = 30000;
+var setPomoTimerValue = document.getElementById("setTime").value;
+
+var setPomoTimer = parseInt(setPomoTimerValue);
+
+var timerNumber = minutesToMilliseconds(setPomoTimer);
 
 var bar = new ProgressBar.Circle(container, {
     color: '#aaa',
@@ -34,9 +38,6 @@ bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
 bar.text.style.fontSize = '2rem';
 
 
-// bar.duration = timerNumber;
-// bar.text.value = millisToMinutesAndSeconds(timerNumber);
-
 function barAnimate() {
     bar.animate(1.0, function () {
         alert("Time Is Up!");
@@ -46,6 +47,10 @@ function barAnimate() {
 
 function barStop() {
     bar.stop();
+}
+
+function resetTimer() {
+    location.reload(false);
 }
 
 function millisToMinutesAndSeconds(millis) {
@@ -60,6 +65,14 @@ function tickerToMinutesAndSeconds(time) {
     return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
 }
 
-function resetTimer() {
-    location.reload(false);
+function minutesToMilliseconds(minutes) {
+    return minutes * 60000;
+}
+
+function timerIncrease() {
+    document.getElementById("setTime").value = parseInt(document.getElementById("setTime").value) + 1;
+}
+
+function timerDecrease() {
+    document.getElementById("setTime").value = parseInt(document.getElementById("setTime").value) - 1;
 }
