@@ -6,35 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <script
-            src="https://code.jquery.com/jquery-3.1.1.min.js"
-            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous"></script>
-    <script src="semantic/dist/semantic.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
 </head>
 <body>
-    <div>
-        <div><h3>Pomodoro Timer</h3></div>
-    </div>
-    <div id="container"></div>
-    <!--<div id="example-clock-container"></div>-->
-    <!--<div><h3>Set Pomodoro Timer (in Minutes)</h3></div>-->
-    <!--<div>-->
-
-            <!--<button onclick="timerDecrease(event)">&minus;</button>-->
-            <input hidden name="wakeUp" id="setTime" type="text" size="2" maxlength="2" value="5" />
-            <!--<button onclick="timerIncrease(event)">&plus;</button>-->
-
-    <!--</div>-->
-    <!--<div><p></p></div>-->
-    <div>
-        <button onclick="barAnimate()">START</button>
-        <button onclick="barStop()">STOP</button>
-        <button onclick="resetTimer()">RESET</button>
+    <div class="columns">
+        <div class="column"></div>
+        <div class="column content has-text-centered">
+            <div><h1 class="title is-2">Pomodoro Timer</h1></div>
+            <div id="container"></div>
+            <p></p>
+            <input hidden name="wakeUp" id="setTime" type="text" size="2" maxlength="2" value="5"/>
+            <div class="block">
+                <button class="button is-success" onclick="barAnimate()">START</button>
+                <button class="button is-danger" onclick="barStop()">STOP</button>
+                <button class="button is-warning" onclick="resetTimer()">RESET</button>
+            </div>
+        </div>
+        <div class="column"></div>
     </div>
     <script src="script.js"></script>
-
 </body>
 </html>

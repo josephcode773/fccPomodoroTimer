@@ -1,5 +1,3 @@
-//var worldWarZ = document.getElementById("setTime");
-
 var setPomoTimerValue = document.getElementById("setTime").value;
 
 (function () {
@@ -34,7 +32,6 @@ var bar = new ProgressBar.Circle(container, {
             circle.setText('');
         } else {
             circle.setText((value) + ' %');
-            console.log(tickerToMinutesAndSeconds(circle.value()));
         }
 
     }
@@ -65,22 +62,6 @@ function millisToMinutesAndSeconds(millis) {
     return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
 }
 
-function tickerToMinutesAndSeconds(time) {
-    var minutes = Math.floor(time / 10);
-    var seconds = ((time % 60000) * 100).toFixed(0);
-    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
-}
-
 function minutesToMilliseconds(minutes) {
     return minutes * 60000;
-}
-
-function timerIncrease(event) {
-    document.getElementById("setTime").value = parseInt(document.getElementById("setTime").value) + 1;
-    event.preventDefault();
-}
-
-function timerDecrease(event) {
-    document.getElementById("setTime").value = parseInt(document.getElementById("setTime").value) - 1;
-    event.preventDefault();
 }

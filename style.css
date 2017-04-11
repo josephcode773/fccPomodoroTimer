@@ -1,6 +1,8 @@
+
 #container {
-    margin: 20px;
+    margin: auto;
     width: 200px;
     height: 200px;
     position: relative;
+    text-align: center;
 }
