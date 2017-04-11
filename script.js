@@ -1,4 +1,10 @@
+//var worldWarZ = document.getElementById("setTime");
+
 var setPomoTimerValue = document.getElementById("setTime").value;
+
+(function () {
+    setPomoTimerValue = prompt("Set Pomodoro Timer (in Minutes)", "25");
+})();
 
 var setPomoTimer = parseInt(setPomoTimerValue);
 
@@ -69,10 +75,12 @@ function minutesToMilliseconds(minutes) {
     return minutes * 60000;
 }
 
-function timerIncrease() {
+function timerIncrease(event) {
     document.getElementById("setTime").value = parseInt(document.getElementById("setTime").value) + 1;
+    event.preventDefault();
 }
 
-function timerDecrease() {
+function timerDecrease(event) {
     document.getElementById("setTime").value = parseInt(document.getElementById("setTime").value) - 1;
+    event.preventDefault();
 }

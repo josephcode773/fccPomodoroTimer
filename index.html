@@ -13,13 +13,16 @@
         <div><h3>Pomodoro Timer</h3></div>
     </div>
     <div id="container"></div>
-    <div><h3>Set Pomodoro Timer (in Minutes)</h3></div>
-    <div>
-        <button onclick="timerDecrease()">&minus;</button>
-        <input id="setTime" type="number" size="2" maxlength="2" value="25">
-        <button onclick="timerIncrease()">&plus;</button>
-    </div>
-    <div><p></p></div>
+    <!--<div id="example-clock-container"></div>-->
+    <!--<div><h3>Set Pomodoro Timer (in Minutes)</h3></div>-->
+    <!--<div>-->
+
+            <!--<button onclick="timerDecrease(event)">&minus;</button>-->
+            <input hidden name="wakeUp" id="setTime" type="text" size="2" maxlength="2" value="5" />
+            <!--<button onclick="timerIncrease(event)">&plus;</button>-->
+
+    <!--</div>-->
+    <!--<div><p></p></div>-->
     <div>
         <button onclick="barAnimate()">START</button>
         <button onclick="barStop()">STOP</button>
